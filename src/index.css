@@ -188,7 +188,7 @@
   .plan-card {
     @apply relative p-6 rounded-xl border border-border bg-gradient-to-br from-card to-secondary/30;
     @apply transition-all duration-300 hover:shadow-xl hover:scale-105;
-    @apply cursor-pointer group;
+    @apply cursor-pointer;
   }
   
   .plan-card.selected {

@@ -244,7 +244,7 @@ const AnalysisPage: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 + index * 0.1 }}
                   >
-                    <Card className={`plan-card h-full ${isPrimaryPlan ? 'selected' : ''}`}>
+                    <Card className={`plan-card group h-full ${isPrimaryPlan ? 'selected' : ''}`}>
                       <CardHeader>
                         <div className="flex items-center justify-between">
                           <CardTitle className="flex items-center space-x-2">

@@ -96,7 +96,7 @@ const OnboardingRole: React.FC = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Card 
-                  className={`plan-card bg-gradient-to-br ${role.gradient} cursor-pointer h-full group`}
+                  className={`plan-card group bg-gradient-to-br ${role.gradient} cursor-pointer h-full`}
                   onClick={() => handleRoleSelection(role.id as 'student' | 'professional')}
                 >
                   <CardHeader className="text-center pb-4">
