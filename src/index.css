@@ -50,11 +50,17 @@
     --success: 142 76% 36%;
     --success-foreground: 0 0% 100%;
     
+    /* Colorful Background Palette */
+    --bg-orange: 25 95% 53%;
+    --bg-blue: 213 94% 68%;
+    --bg-white: 0 0% 100%;
+    
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(213 94% 68%), hsl(213 94% 85%));
     --gradient-hero: linear-gradient(135deg, hsl(213 94% 68%), hsl(213 94% 55%), hsl(142 76% 60%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 17% 98%));
     --gradient-subtle: linear-gradient(180deg, hsl(210 17% 98%), hsl(210 17% 96%));
+    --gradient-colorful: linear-gradient(135deg, hsl(25 95% 53% / 0.1), hsl(0 0% 100% / 0.1), hsl(213 94% 68% / 0.1));
     
     /* Shadows - Professional Depth */
     --shadow-sm: 0 1px 2px hsl(217 33% 17% / 0.1);
@@ -144,11 +150,12 @@
   
   .animated-background::before {
     content: '';
-    @apply absolute inset-0 opacity-30;
-    background: radial-gradient(circle at 20% 80%, hsl(213 94% 68% / 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, hsl(142 76% 60% / 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, hsl(213 94% 85% / 0.1) 0%, transparent 50%);
-    animation: float 20s ease-in-out infinite;
+    @apply absolute inset-0 opacity-40;
+    background: radial-gradient(circle at 20% 80%, hsl(25 95% 53% / 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(213 94% 68% / 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, hsl(0 0% 100% / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 60% 60%, hsl(25 95% 53% / 0.1) 0%, transparent 40%);
+    animation: float 25s ease-in-out infinite;
   }
   
   /* Glass Effect */

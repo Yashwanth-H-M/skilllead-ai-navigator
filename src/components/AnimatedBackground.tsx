@@ -25,7 +25,15 @@ class Particle {
     this.speedX = (Math.random() - 0.5) * 0.5;
     this.speedY = (Math.random() - 0.5) * 0.5;
     this.opacity = Math.random() * 0.3 + 0.1;
-    this.color = Math.random() > 0.7 ? 'rgba(16, 185, 129, ' : 'rgba(59, 130, 246, '; // Green or blue
+    // Orange, white, and blue particles
+    const rand = Math.random();
+    if (rand > 0.66) {
+      this.color = 'rgba(255, 138, 0, '; // Orange
+    } else if (rand > 0.33) {
+      this.color = 'rgba(59, 130, 246, '; // Blue  
+    } else {
+      this.color = 'rgba(255, 255, 255, '; // White
+    }
     this.pulsePhase = Math.random() * Math.PI * 2;
   }
 
@@ -126,7 +134,10 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
           if (distance < maxDistance) {
             const opacity = (1 - distance / maxDistance) * 0.1;
             ctx.save();
-            ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
+            // Blend connection colors based on particle colors
+            const blendColor = distance < maxDistance / 2 ? 
+              `rgba(255, 138, 0, ${opacity})` : `rgba(59, 130, 246, ${opacity})`;
+            ctx.strokeStyle = blendColor;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particle1.x, particle1.y);
