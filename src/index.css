@@ -192,7 +192,8 @@
   }
   
   .plan-card.selected {
-    @apply border-primary shadow-glow bg-gradient-to-br from-primary/5 to-primary/10;
+    @apply border-primary bg-gradient-to-br from-primary/5 to-primary/10;
+    box-shadow: var(--shadow-glow);
   }
   
   /* Chat Message */
